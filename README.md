@@ -1,2 +1,2 @@
 # SGHSS
-Construção de um sistema hospitalar, mais por parte do back-end
+Construção de um sistema hospitalar, usando back-end. Funcionalidades login/sing-up
