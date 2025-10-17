@@ -1,6 +1,7 @@
 *SISTEMA HOSPITALAR BACK-END*                                                
 Trabalho uninter construção de um sistema hospitalar (materia Eletiva IV: Projeto Multidisciplinar de Análise e Desenvolvimento de Sistemas)
 
+*INSTALAÇÃO DE DEPENDENCIAS*
 Por favor antes de inciar o sistema digite os seguintes comandos no terminal:
     
     npm init -y 
