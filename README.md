@@ -2,6 +2,7 @@
 Trabalho uninter construção de um sistema hospitalar (materia Eletiva IV: Projeto Multidisciplinar de Análise e Desenvolvimento de Sistemas)
 
 *INSTALAÇÃO DE DEPENDENCIAS*
+
 Por favor antes de inciar o sistema digite os seguintes comandos no terminal:
     
     npm init -y 
@@ -17,3 +18,7 @@ A segunda linha de comando instala as seguintes dependências:
     bcryptjs: Utilizado para criptografar senhas.
     jsonwebtoken: Gera e valida tokens JWT para autenticação.
     cors: Habilita requisições entre diferentes origens (Cross-Origin Resource Sharing).
+
+*COMO RODAR O SISTEMA*
+
+    node index.js
