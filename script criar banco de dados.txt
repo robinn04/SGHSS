@@ -1,0 +1,214 @@
+create database SGHSS;
+use SGHSS;
+CREATE TABLE Administrador (
+  idAdministrador INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Login_idLogin INTEGER UNSIGNED NOT NULL,
+  nomeAdministrador VARCHAR(100) NULL,
+  cpfAdministrador CHAR(11) NULL,
+  nivelAcesso INTEGER UNSIGNED NULL,
+  PRIMARY KEY(idAdministrador),
+  INDEX Administrador_FKIndex1(Login_idLogin)
+);
+
+CREATE TABLE Login (
+  idLogin INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  usuario VARCHAR(50) NULL,
+  senha VARCHAR(200) NULL,
+  tipoUsuario VARCHAR(15) NULL,
+  statusLogin BOOL NULL,
+  PRIMARY KEY(idLogin)
+);
+
+CREATE TABLE ProfissionalSaude (
+  idProfissionalSaude INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Login_idLogin INTEGER UNSIGNED NOT NULL,
+  nomeProfissional VARCHAR(100) NULL,
+  cpfProfissional CHAR(11) NULL,
+  cargo VARCHAR(100) NULL,
+  horarioTrabalho TIME NULL,
+  PRIMARY KEY(idProfissionalSaude),
+  INDEX ProfissionalSaude_FKIndex1(Login_idLogin)
+);
+
+CREATE TABLE Paciente (
+  idPaciente INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Login_idLogin INTEGER UNSIGNED NOT NULL,
+  Endereco_idEndereco INTEGER UNSIGNED NOT NULL,
+  nomePaciente  VARCHAR(100) NULL,
+  dataNacismentoPaciente DATE NULL,
+  cpfPaciente CHAR(11) NULL,
+  historicoClinico VARCHAR(250) NULL,
+  PRIMARY KEY(idPaciente),
+  INDEX Paciente_FKIndex1(Endereco_idEndereco),
+  INDEX Paciente_FKIndex2(Login_idLogin)
+);
+
+CREATE TABLE Endereco (
+  idEndereco INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  longradouro VARCHAR(100) NULL,
+  numero CHAR(10) NULL,
+  complemento VARCHAR(100) NULL,
+  bairro VARCHAR(50) NULL,
+  cidade VARCHAR(50) NULL,
+  estado VARCHAR(50) NULL,
+  PRIMARY KEY(idEndereco)
+);
+
+CREATE TABLE Consulta (
+  idConsulta INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Paciente_idPaciente INTEGER UNSIGNED NOT NULL,
+  ProfissionalSaude_idProfissionalSaude INTEGER UNSIGNED NOT NULL,
+  dataHoraConsulta DATETIME NULL,
+  tipoConsulta VARCHAR(200) NULL,
+  statusConsulta BOOL NULL,
+  observacoesConsultas VARCHAR(250) NULL,
+  PRIMARY KEY(idConsulta),
+  INDEX Consulta_FKIndex1(ProfissionalSaude_idProfissionalSaude),
+  INDEX Consulta_FKIndex2(Paciente_idPaciente)
+);
+
+CREATE TABLE Telemedicina (
+  idTelemedicina INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Paciente_idPaciente INTEGER UNSIGNED NOT NULL,
+  ProfissionalSaude_idProfissionalSaude INTEGER UNSIGNED NOT NULL,
+  linkVideo VARCHAR(250) NULL,
+  dataHoraTelemedicina DATETIME NULL,
+  duracaoTelemedicina TIME NULL,
+  statusTelemedicina BOOL NULL,
+  PRIMARY KEY(idTelemedicina),
+  INDEX Consulta_FKIndex1(ProfissionalSaude_idProfissionalSaude),
+  INDEX Consulta_FKIndex2(Paciente_idPaciente)
+);
+
+CREATE TABLE Estoque (
+  idEstoque INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Administrador_idAdministrador INTEGER UNSIGNED NOT NULL,
+  responsavel VARCHAR(100) NULL,
+  ultimaAtualizacao DATETIME NULL,
+  PRIMARY KEY(idEstoque),
+  INDEX Estoque_FKIndex1(Administrador_idAdministrador)
+);
+
+CREATE TABLE Suprimentos (
+  idSuprimentos INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Estoque_idEstoque INTEGER UNSIGNED NOT NULL,
+  nomeSuprimento VARCHAR(50) NULL,
+  tipoSuprimento VARCHAR(50) NULL,
+  quantidade INTEGER UNSIGNED NULL,
+  dataValidade DATE NULL,
+  PRIMARY KEY(idSuprimentos),
+  INDEX Suprimentos_FKIndex1(Estoque_idEstoque)
+);
+
+CREATE TABLE Exame (
+  idExame INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Consulta_idConsulta INTEGER UNSIGNED NOT NULL,
+  tipoExame VARCHAR(100) NULL,
+  dataHoraExame DATETIME NULL,
+  resultadoExame VARCHAR(200) NULL,
+  statusExame BOOL NULL,
+  PRIMARY KEY(idExame),
+  INDEX Exame_FKIndex1(Consulta_idConsulta)
+);
+
+CREATE TABLE LogAuditoria (
+  idLogAuditoria INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Administrador_idAdministrador INTEGER UNSIGNED NOT NULL,
+  Login_idLogin INTEGER UNSIGNED NOT NULL,
+  usuario VARCHAR(100) NULL,
+  acaoLogAuditoria BOOL NULL,
+  dataHoraLogAuditoria DATETIME NULL,
+  ipOrigem VARCHAR(45) NULL,
+  PRIMARY KEY(idLogAuditoria),
+  INDEX LogAuditoria_FKIndex1(Login_idLogin),
+  INDEX LogAuditoria_FKIndex2(Administrador_idAdministrador)
+);
+
+CREATE TABLE Backup (
+  idBackup INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Administrador_idAdministrador INTEGER UNSIGNED NOT NULL,
+  dataHoraExecucao DATETIME NULL,
+  tipoBackup VARCHAR(50) NULL,
+  statusBackup BOOL NULL,
+  PRIMARY KEY(idBackup),
+  INDEX Backup_FKIndex1(Administrador_idAdministrador)
+);
+
+-- Endereços
+INSERT INTO Endereco (longradouro, numero, complemento, bairro, cidade, estado) VALUES
+('Rua A', '101', 'Apto 1', 'Centro', 'São Luís', 'MA'),
+('Rua B', '202', '', 'Renascença', 'Imperatriz', 'MA'),
+('Rua C', '303', 'Casa', 'Cohab', 'Caxias', 'MA'),
+('Rua D', '404', 'Bloco B', 'Turu', 'Balsas', 'MA');
+
+-- Logins para profissionais
+INSERT INTO Login (usuario, senha, tipoUsuario, statusLogin) VALUES
+('joao.med', 'senha123', 'profissional', true),
+('maria.med', 'senha123', 'profissional', true),
+('carlos.med', 'senha123', 'profissional', true),
+('ana.med', 'senha123', 'profissional', true);
+
+-- Profissionais (idLogin 1 a 4)
+INSERT INTO ProfissionalSaude (Login_idLogin, nomeProfissional, cpfProfissional, cargo, horarioTrabalho) VALUES
+(1, 'João Medeiros', '11111111111', 'Clínico Geral', '08:00:00'),
+(2, 'Maria Lima', '22222222222', 'Pediatra', '09:00:00'),
+(3, 'Carlos Silva', '33333333333', 'Ortopedista', '10:00:00'),
+(4, 'Ana Paula', '44444444444', 'Ginecologista', '11:00:00');
+
+-- Logins para pacientes
+INSERT INTO Login (usuario, senha, tipoUsuario, statusLogin) VALUES
+('pac1', 'senha123', 'paciente', true),
+('pac2', 'senha123', 'paciente', true),
+('pac3', 'senha123', 'paciente', true),
+('pac4', 'senha123', 'paciente', true);
+
+-- Pacientes (idLogin 5 a 8, Endereco 1 a 4)
+INSERT INTO Paciente (Login_idLogin, Endereco_idEndereco, nomePaciente, dataNacismentoPaciente, cpfPaciente, historicoClinico) VALUES
+(5, 1, 'Carlos Mendes', '1990-05-10', '55555555555', 'Hipertensão'),
+(6, 2, 'Fernanda Lima', '1985-08-22', '66666666666', 'Diabetes'),
+(7, 3, 'Joana Silva', '2000-01-15', '77777777777', 'Asma'),
+(8, 4, 'Marcos Souza', '1978-11-30', '88888888888', 'Nenhum');
+
+-- Consultas (idPaciente 1 a 4, idProfissional 1 a 4)
+INSERT INTO Consulta (Paciente_idPaciente, ProfissionalSaude_idProfissionalSaude, dataHoraConsulta, tipoConsulta, statusConsulta, observacoesConsultas) VALUES
+(1, 1, '2025-10-01 09:00:00', 'Rotina', true, 'Paciente esta com dores nas costas'),
+(2, 2, '2025-10-02 10:00:00', 'Pediatria', true, 'Leve incomodo na coluna'),
+(3, 3, '2025-10-03 11:00:00', 'Ortopedia', false, 'Paciente sente dores na lombar'),
+(4, 4, '2025-10-04 12:00:00', 'Ginecologia', true, 'Sem observações');
+
+-- Telemedicina (idPaciente 1 a 4, idProfissional 1 a 4)
+INSERT INTO Telemedicina (Paciente_idPaciente, ProfissionalSaude_idProfissionalSaude, linkVideo, dataHoraTelemedicina, duracaoTelemedicina, statusTelemedicina) VALUES
+(1, 1, 'https://meet.example.com/1', '2025-10-01 09:00:00', '00:30:00', true),
+(2, 2, 'https://meet.example.com/2', '2025-10-02 10:00:00', '00:45:00', true),
+(3, 3, 'https://meet.example.com/3', '2025-10-03 11:00:00', '00:00:00', false),
+(4, 4, 'https://meet.example.com/4', '2025-10-04 12:00:00', '00:40:00', true);
+
+-- Logins para administradores
+INSERT INTO Login (usuario, senha, tipoUsuario, statusLogin) VALUES
+('admin1', 'senha123', 'administrador', true),
+('admin2', 'senha123', 'administrador', true),
+('admin3', 'senha123', 'administrador', true),
+('admin4', 'senha123', 'administrador', true);
+
+-- Administradores (idLogin 9 a 12)
+INSERT INTO Administrador (Login_idLogin, nomeAdministrador, cpfAdministrador, nivelAcesso) VALUES
+(9, 'João Admin', '99999999999', 1),
+(10, 'Maria Admin', '10101010101', 2),
+(11, 'Carlos Admin', '12121212121', 1),
+(12, 'Ana Admin', '13131313131', 3);
+
+-- Estoques (idAdministrador 1 a 4)
+INSERT INTO Estoque (Administrador_idAdministrador, responsavel, ultimaAtualizacao) VALUES
+(1, 'João Admin', '2025-10-10 08:00:00'),
+(2, 'Maria Admin', '2025-10-11 09:00:00'),
+(3, 'Carlos Admin', '2025-10-12 10:00:00'),
+(4, 'Ana Admin', '2025-10-13 11:00:00');
+
+-- Suprimentos (idEstoque 1 a 4)
+INSERT INTO Suprimentos (Estoque_idEstoque, nomeSuprimento, tipoSuprimento, quantidade, dataValidade) VALUES
+(1, 'Luvas Cirúrgicas', 'EPI', 500, '2026-01-01'),
+(2, 'Seringas 5ml', 'Hospitalar', 1000, '2026-06-01'),
+(3, 'Álcool 70%', 'Higiene', 200, '2025-12-31'),
+(4, 'Máscaras N95', 'EPI', 300, '2026-03-15');
+
+	
