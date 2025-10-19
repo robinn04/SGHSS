@@ -104,7 +104,9 @@ RESULTADO (faça a requisição, pois token em baixo é ilustrativo):
 *LISTA DE ENDPOINTS FEITOS*
 
 1.0 REGISTRAR PACIENTES: POST /api/pacientes
+
 Authorization: Bearer insira_seu_token
+
 BODY:
 
 	{
@@ -129,6 +131,7 @@ RESULTADO:
 		"message": "Paciente cadastrado com sucesso!"
 	}	
 2.0 REMOVER PACIENTE POR ID: DELETE /api/pacientes/{id}
+
 Authorization: Bearer insira_seu_token
 
 RESULTADO:
@@ -137,6 +140,7 @@ RESULTADO:
 		"message": "Paciente removido com sucesso!"
 	}
 3.0 LISTAR PACIENTES: GET /api/pacientes
+
 Authorization: Bearer insira_seu_token
 
 RESULTADO:
@@ -170,7 +174,9 @@ RESULTADO:
 				"estado": "MA"
 			}
 4.0 RESGISTRAR PROFISSIONAL: POST /api/funcionarios
+
 Authorization: Bearer insira_seu_token
+
 BODY:
 
 	{
@@ -187,6 +193,7 @@ RESULTADO:
 		"message": "Funcionário cadastrado com sucesso!"
 	}
 5.0 DELETAR PROFISSIONAL POR ID: DELETE /api/funcionarios/{id}
+
 Authorization: Bearer insira_seu_token
 
 RESULTADO:
@@ -195,6 +202,7 @@ RESULTADO:
 		"message": "Funcionário removido com sucesso!"
 	}
 6.0 LISTAR FUNCIONARIOS: GET /api/funcionarios
+
 Authorization: Bearer insira_seu_token	
 
 RESULTADO:
@@ -220,7 +228,9 @@ RESULTADO:
 				"statusLogin": 1
 			}
 7.0 AGENDAR CONSULTA: POST /api/consultas
+
 Authorization: Bearer insira_seu_token	
+
 BODY:
 
 	{
@@ -237,6 +247,7 @@ RESULTADO:
 		"message": "Consulta agendada com sucesso!"
 	}
 8.0 LISTAR CONSULTAS: GET /api/consultas/simples
+
 Authorization: Bearer insira_seu_token
 
 RESULTADO:
@@ -262,7 +273,9 @@ RESULTADO:
 				"observacoesConsultas": "Leve incomodo na coluna"
 			},
 9.0 AGENDAR TELECONSULTA: POST /api/teleconsultas
+
 Authorization: Bearer insira_seu_token
+
 BODY:
 
 	{
@@ -280,6 +293,7 @@ RESULTADO:
 		"message": "Teleconsulta agendada com sucesso!"
 	}
 10.0 LISTAR TELECONSULTAS: GET /api/teleconsultas/simples
+
 Authorization: Bearer insira_seu_token
 
 RESULTADO:
@@ -306,6 +320,7 @@ RESULTADO:
 			}
 
 11.00 VERIFICAR ESTOQUES E SUPRIMENTSO: GET /api/estoques
+
 Authorization: Bearer insira_seu_token
 
 RESULTADO: 
