@@ -31,15 +31,21 @@ Antes de executar o codigo principal, tenha o MySQL Workbench 8.0 CE para criar 
 Quando for criar as tabelas do banco de dados ultize o arquivo "script criar banco de dados.txt", e copie todo o codigo dele para dentro do MySQL Workbench 8.0, 
 e depois execute tudo em conjunto, assim as tabelas estaram criadas.
 
-Clone o repositorio e entre nele
+Instalação do node.js é crucial para conexao entre o banco de dados e o terminal. 
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+CLONE O ESSE REPOSITORIO:
 
-Antes de inciar o sistema digite os seguintes comandos no terminal:
+    git clone https://github.com/robinn04/sghss-backend.git
+    cd insira-seu-repositorio
+
+INSTALE AS DEPENDENCIAS:
     
     npm init -y 
     npm install express mysql2 dotenv bcryptjs jsonwebtoken cors 
+
+CERTIFIQUE QUE ESTEJA CONECTADO CORRETAMENTE
+
+Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em 
 
 
 *COMO RODAR O SISTEMA*
