@@ -27,7 +27,9 @@ Ultilização da arquitetura MVC
 
 *EXECUTANDO LOCALMENTE*
 
+Antes de executar o codigo principal, tenha o MySQL Workbench 8.0 CE para criar as tabelas do banco de dados e a conexao com o servidor.
 
+Quando for criar as tabelas do banco de dados ultime o arquivo 
 
 *INSTALAÇÃO DE DEPENDENCIAS*
 
@@ -36,16 +38,6 @@ Por favor antes de inciar o sistema digite os seguintes comandos no terminal:
     npm init -y 
     npm install express mysql2 dotenv bcryptjs jsonwebtoken cors 
 
-A primeira linha de comando cria automaticamente o arquivo package.json com as configurações padrão.
-
-A segunda linha de comando instala as seguintes dependências:
-
-    express: Framework para criar servidores HTTP.
-    mysql2: Cliente MySQL para conectar ao banco de dados.
-    dotenv: Permite usar variáveis de ambiente definidas em um arquivo .env.
-    bcryptjs: Utilizado para criptografar senhas.
-    jsonwebtoken: Gera e valida tokens JWT para autenticação.
-    cors: Habilita requisições entre diferentes origens (Cross-Origin Resource Sharing).
 
 *COMO RODAR O SISTEMA*
 
