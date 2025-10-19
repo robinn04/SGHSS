@@ -1,6 +1,13 @@
-*SISTEMA HOSPITALAR BACK-END*  
+*SGHSS - SISTEMA DE GESTÃO HOSPITALAR E DE SERVIÇOS DE SAÚDE*
 
-Trabalho uninter construção de um sistema hospitalar (materia Eletiva IV: Projeto Multidisciplinar de Análise e Desenvolvimento de Sistemas)
+Projeto Uninter da materia dee ADS Analise e Desenvolvimento de Sistema. Feito pelo aluno Robinson Francisco Silva de Mequita com RU: 4522562
+
+Contrução de uma RESTful para gerenciamento de hospitais, que vai permitir consultar, registrar, listar funcionarios. Dentre outras funcionalidades.
+
+*TECNOLOGIAS USADAS*
+
+
+
 
 *INSTALAÇÃO DE DEPENDENCIAS*
 
