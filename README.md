@@ -1,6 +1,6 @@
 *SGHSS - SISTEMA DE GESTÃO HOSPITALAR E DE SERVIÇOS DE SAÚDE*
 
-Projeto Uninter da materia dee ADS Analise e Desenvolvimento de Sistema. Feito pelo aluno Robinson Francisco Silva de Mequita com RU: 4522562
+Projeto Uninter da materia de ADS Analise e Desenvolvimento de Sistema. Feito pelo aluno Robinson Francisco Silva de Mequita com RU: 4522562
 
 Contrução de uma RESTful para gerenciamento de hospitais, que vai permitir consultar, registrar, listar funcionarios. Dentre outras funcionalidades. 
 Ultilização da arquitetura MVC
@@ -29,11 +29,11 @@ Ultilização da arquitetura MVC
 
 *EXECUTANDO LOCALMENTE*
 
-Antes de executar o codigo principal, tenha o MySQL Workbench 8.0 CE para criar as tabelas do banco de dados e a conexao com o servidor.
-Quando for criar as tabelas do banco de dados ultize o arquivo "script criar banco de dados.txt", e copie todo o codigo dele para dentro do MySQL Workbench 8.0, 
-e depois execute tudo em conjunto, assim as tabelas estaram criadas.
+Antes de executar o codigo principal, recomendo usar o MySQL Workbench 8.0 CE para modelar o banco de dados com as tabelas.
+Quando for criar as tabelas do banco de dados ultize o arquivo "script criar banco de dados.txt", e copie todo o codigo dentro dele para dentro do MySQL Workbench 8.0, 
+e depois execute tudo em conjunto, assim as tabelas estarão criadas.
 
-Instalação do node.js é crucial para conexao entre o banco de dados e o terminal. 
+Instalação do framework node.js é crucial para conexao entre o banco de dados e o sistema (no terminal). 
 
 CLONE ESSE REPOSITORIO:
 
@@ -48,7 +48,7 @@ INSTALE AS DEPENDENCIAS:
 CERTIFIQUE QUE ESTEJA CONECTADO CORRETAMENTE
 
 Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em sghss-backend
-/.env altere as variaveis conforme seu banco dados local.
+/.env altere as variaveis conforme as informações do seu banco dados local.
 
     DB_HOST=localhost
     DB_USER=root
@@ -62,7 +62,7 @@ PARA INICAR
 
 *ATENÇÃO A AUTENTICAÇÃO*
 
-O sistema feito utiliza a autenticação JWT então por isso maioria das rotas são protegidas por essa autenticação, ou seja voce precisará
+O sistema feito, utiliza a autenticação JWT então por isso maioria das rotas são protegidas por essa autenticação, ou seja voce precisará
 criar um token de acesso atraves do sign-up e um login
 
 *SIGN-UP E LOGIN*
@@ -83,7 +83,6 @@ RESULTADO:
     {
 	    "message": "Administrador cadastrado com sucesso!"
     }
-
 LOGIN ADMIN: POST /api/admin/login
 
 	{
