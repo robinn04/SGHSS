@@ -25,6 +25,8 @@ Ultilização da arquitetura MVC
 
 -CORS: para permitir requisições de diferentes origens (Cross-Origin Resource Sharing)
 
+-insomnia: testar APIs RESTful
+
 *EXECUTANDO LOCALMENTE*
 
 Antes de executar o codigo principal, tenha o MySQL Workbench 8.0 CE para criar as tabelas do banco de dados e a conexao com o servidor.
@@ -33,7 +35,7 @@ e depois execute tudo em conjunto, assim as tabelas estaram criadas.
 
 Instalação do node.js é crucial para conexao entre o banco de dados e o terminal. 
 
-CLONE O ESSE REPOSITORIO:
+CLONE ESSE REPOSITORIO:
 
     git clone https://github.com/robinn04/sghss-backend.git
     cd insira-seu-repositorio
@@ -46,9 +48,43 @@ INSTALE AS DEPENDENCIAS:
 CERTIFIQUE QUE ESTEJA CONECTADO CORRETAMENTE
 
 Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em sghss-backend
-/.env altere as variaveis conforme seu banco dados local
+/.env altere as variaveis conforme seu banco dados local.
 
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASS=root
+    DB_NAME=SGHSS
+    JWT_SECRET=chave_secreta
 
-*COMO RODAR O SISTEMA*
+PARA INICAR 
 
     node index.js
+
+*ATENÇÃO A AUTENTICAÇÃO*
+
+O sistema feito utiliza a autenticação JWT então por isso maioria das rotas são protegidas por essa autenticação, ou seja voce precisará
+criar um token de acesso atraves do sign-up e um login
+
+*SIGN-UP*
+
+A partir daqui utilize o insomnia ou postman 
+
+REGISTRAR ADMIN: POST /api/admin/signup
+   
+    {
+      "usuario": "admin5",
+      "senha": "123456",
+      "nomeAdministrador": "Robinson",
+      "cpfAdministrador": "12345678901",
+      "nivelAcesso": 1
+    }
+RESULTADO: 
+
+    {
+	    "message": "Administrador cadastrado com sucesso!"
+    }
+
+
+
+
+
