@@ -45,7 +45,8 @@ INSTALE AS DEPENDENCIAS:
 
 CERTIFIQUE QUE ESTEJA CONECTADO CORRETAMENTE
 
-Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em 
+Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em sghss-backend
+/.env altere as variaveis conforme seu banco dados local
 
 
 *COMO RODAR O SISTEMA*
