@@ -28,12 +28,15 @@ Ultilização da arquitetura MVC
 *EXECUTANDO LOCALMENTE*
 
 Antes de executar o codigo principal, tenha o MySQL Workbench 8.0 CE para criar as tabelas do banco de dados e a conexao com o servidor.
+Quando for criar as tabelas do banco de dados ultize o arquivo "script criar banco de dados.txt", e copie todo o codigo dele para dentro do MySQL Workbench 8.0, 
+e depois execute tudo em conjunto, assim as tabelas estaram criadas.
 
-Quando for criar as tabelas do banco de dados ultime o arquivo 
+Clone o repositorio e entre nele
 
-*INSTALAÇÃO DE DEPENDENCIAS*
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
 
-Por favor antes de inciar o sistema digite os seguintes comandos no terminal:
+Antes de inciar o sistema digite os seguintes comandos no terminal:
     
     npm init -y 
     npm install express mysql2 dotenv bcryptjs jsonwebtoken cors 
