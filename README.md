@@ -9,7 +9,7 @@ Por favor antes de inciar o sistema digite os seguintes comandos no terminal:
     npm init -y 
     npm install express mysql2 dotenv bcryptjs jsonwebtoken cors 
 
-O primeira linha de comando cria automaticamente o arquivo package.json com as configurações padrão.
+A primeira linha de comando cria automaticamente o arquivo package.json com as configurações padrão.
 
 A segunda linha de comando instala as seguintes dependências:
 
