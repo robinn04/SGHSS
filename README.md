@@ -84,6 +84,29 @@ RESULTADO:
 	    "message": "Administrador cadastrado com sucesso!"
     }
 
+LOGIN ADMIN: /api/admin/login
+
+	{
+  	"usuario": "admin5",
+  	"senha": "123456"
+	}
+RESULTADO (faça a requisição, pois token em baixo é ilustrativo): 
+	
+	{
+		"message": "Login realizado com sucesso",
+		"token":   "eyJhbGciOiJIUzI1N..."
+	}
+
+*USE O TOKEN NAS PROXIMAS NAS PROXIMAS REQUISIÇÕES*
+
+	Authorization: Bearer INSIRA_SEU_TOKEN
+
+*LISTA DE ENDPOINTS FEITOS*
+
+REGISTRAR PACIENTES:
+
+
+
 
 
 
