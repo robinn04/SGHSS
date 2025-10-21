@@ -104,7 +104,7 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
      		"token":   "eyJhbGciOiJIUzI1N..."
      	}
 
-# 🚨 Lista de endpoint feitos
+# 🚨 Lista de exemplos de endpoint feitos
 -⚠️Todas as requisições protegidas devem conter o header: 
 
     Authorization: Bearer SEU_TOKEN
