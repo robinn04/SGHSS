@@ -1,6 +1,5 @@
 # 🏥 SGHSS – Sistema de Gestão Hospitalar e de Serviços de Saúde
-Sistema desenvolvido para a disciplina Projeto Multidisciplinar: Desenvolvimento Back-End do curso de Análise e Desenvolvimento de Sistemas – UNINTER.
-
+Sistema desenvolvido para a disciplina Projeto Multidisciplinar: Desenvolvimento Back-End do curso de Análise e Desenvolvimento de Sistemas – UNINTER.\
 👨‍💻 Autor: Robinson Francisco Silva de Mesquita 
 🆔 RU: 4522562
 
