@@ -57,7 +57,7 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
       DB_PASS=root
       DB_NAME=SGHSS
       JWT_SECRET=chave_secreta
--Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em sghss-backend
+⚠️Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em sghss-backend
 /.env altere as variaveis conforme as informações do seu banco dados local.
 
 
