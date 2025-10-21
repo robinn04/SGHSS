@@ -66,10 +66,10 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
       node index.js
   
 # 🔐 Autenticação JWT
-- A maioria das rotas exige autenticação via token. Use o endpoint de sign-up e login para gerar seu token.
+*A maioria das rotas exige autenticação via token. Use o endpoint de sign-up e login para gerar seu token.*
 
-- 🔑 Registrar administrador
-- http
+- 🔑 Registrar administrador<br>
+- http<br>
 - POST /api/admin/signup
 - json
   
