@@ -32,15 +32,17 @@ O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas 
 - MySQL Workbench 8.0 CE instalado<br>
 - Node.js instalado<br>
 
-Antes de executar o codigo principal, recomendo usar o MySQL Workbench 8.0 CE para modelar o banco de dados com as tabelas.
+-Antes de executar o codigo principal, recomendo usar o MySQL Workbench 8.0 CE para modelar o banco de dados com as tabelas.
 Quando for criar as tabelas do banco de dados ultize o arquivo "script criar banco de dados.txt", e copie todo o codigo dentro dele para dentro do MySQL Workbench 8.0, 
-e depois execute tudo em conjunto, assim as tabelas estarão criadas.
+e depois execute tudo em conjunto, assim as tabelas estarão criadas.<br>
+-Instalação do framework node.js é crucial para conexao entre o banco de dados e o sistema (no terminal). 
 
-⚙️ Passo a passo
-bash
-# Clone o repositório
-git clone https://github.com/robinn04/sghss-backend.git
-cd sghss-backend
+⚙️ Passo a passo bash
+
+- Clone o repositório<br>
+
+      git clone https://github.com/robinn04/sghss-backend.git
+      cd sghss-backend
 
 # Instale as dependências
 npm init -y
