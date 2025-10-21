@@ -109,5 +109,10 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
 
     Authorization: Bearer SEU_TOKEN
 
+ *⚡1.0 REGISTRAR PACIENTES*
+- http
+- POST /api/admin/login
+- Content-Type: application/json 
+- body
 
 
