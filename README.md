@@ -65,25 +65,28 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
 
       node index.js
   
-🔐 Autenticação JWT
-A maioria das rotas exige autenticação via token. Use o endpoint de sign-up e login para gerar seu token.
+# 🔐 Autenticação JWT
+- A maioria das rotas exige autenticação via token. Use o endpoint de sign-up e login para gerar seu token.
 
-🔑 Registrar administrador
-http
-POST /api/admin/signup
-json
-{
-  "usuario": "admin5",
-  "senha": "123456",
-  "nomeAdministrador": "Robinson",
-  "cpfAdministrador": "12345678901",
-  "nivelAcesso": 1
-}
-🔑 Login administrador
-http
-POST /api/admin/login
-json
-{
-  "usuario": "admin5",
-  "senha": "123456"
-}
+- 🔑 Registrar administrador
+- http
+- POST /api/admin/signup
+- json
+  
+      {
+        "usuario": "admin5",
+        "senha": "123456",
+        "nomeAdministrador": "Robinson",
+        "cpfAdministrador": "12345678901",
+        "nivelAcesso": 1
+      }
+  
+- 🔑 Login administrador
+- http
+- POST /api/admin/login
+- json
+  
+      {
+        "usuario": "admin5",
+        "senha": "123456"
+      }
