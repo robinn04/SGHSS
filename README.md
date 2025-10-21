@@ -375,3 +375,18 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
     					}
     				]
     			}
+#💡 Resumo dos endpoints  
+
+- POST /api/admin/signup = Cadastro de administrador do sistema. 
+- POST /api/admin/login = Autenticação de administrador com geração de token JWT. 
+- POST /api/pacientes = Registro de novo paciente, incluindo dados pessoais, clínicos e endereço. 
+- DELETE /api/pacientes/{id} = Exclusão de paciente por ID. 
+- GET /api/pacientes = Listagem de pacientes cadastrados no sistema. 
+- POST /api/funcionarios = Cadastro de profissional da saúde com cargo e horário de trabalho. 
+- DELETE /api/funcionarios/{id} = Exclusão de profissional da saúde por ID. 
+- GET /api/funcionarios = Listagem de profissionais da saúde ativos. 
+- POST /api/consultas = Agendamento de consulta presencial entre paciente e profissional. 
+- GET /api/consultas/simples = Listagem simplificada de consultas agendadas. 
+- POST /api/teleconsultas = Agendamento de sessão de telemedicina com link de videochamada. 
+- GET /api/teleconsultas/simples = Listagem de teleconsultas realizadas ou agendadas. 
+- GET /api/estoques = Consulta aos estoques hospitalares e suprimentos disponíveis. 
