@@ -4,7 +4,7 @@ Sistema desenvolvido para a disciplina Projeto Multidisciplinar: Desenvolvimento
 👨‍💻 Autor: Robinson Francisco Silva de Mesquita <br>
 🆔 RU: 4522562
 
-# 🚀 Sobre o Projeto
+# 🚀 Sobre o projeto
 O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas e serviços de saúde. Permite funcionalidades como:
 
 - Cadastro e listagem de pacientes <br>
@@ -14,7 +14,7 @@ O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas 
 - Autenticação via JWT<br>
 - Arquitetura baseada em MVC<br>
 
-# 🛠️ Tecnologias Utilizadas
+# 🛠️ Tecnologias utilizadas
 
 - JavaScript:	  Linguagem principal do backend<br>
 - Node.js:	    Ambiente de execução<br>
@@ -27,7 +27,7 @@ O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas 
 - CORS:	        Permitir requisições entre origens distintas<br>
 - Insomnia:	    Testes de requisições HTTP<br>
  
-🧪 Executando Localmente
+# 🧪 Executando localmente
 📦 Pré-requisitos
 MySQL Workbench 8.0 CE
 
