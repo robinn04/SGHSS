@@ -375,7 +375,7 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
     					}
     				]
     			}
-#💡 Resumo dos endpoints  
+# 💡 Resumo dos endpoints  
 
 - POST /api/admin/signup = Cadastro de administrador do sistema. 
 - POST /api/admin/login = Autenticação de administrador com geração de token JWT. 
