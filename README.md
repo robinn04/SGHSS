@@ -28,7 +28,7 @@ O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas 
 - Insomnia:	    Testes de requisições HTTP<br>
  
 # 🧪 Executando localmente
-📦 Pré-requisitos
+*📦 Pré-requisitos*
 - MySQL Workbench 8.0 CE instalado<br>
 - Node.js instalado<br>
 
@@ -38,7 +38,7 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
 
 -Instalação do framework node.js é crucial para conexao entre o banco de dados e o sistema (no terminal). 
 
-⚙️ Passo a passo bash
+*⚙️ Passo a passo bash*
 
 - Clone o repositório<br>
 
