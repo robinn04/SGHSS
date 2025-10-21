@@ -34,7 +34,8 @@ O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas 
 
 -Antes de executar o codigo principal, recomendo usar o MySQL Workbench 8.0 CE para modelar o banco de dados com as tabelas.
 Quando for criar as tabelas do banco de dados ultize o arquivo "script criar banco de dados.txt", e copie todo o codigo dentro dele para dentro do MySQL Workbench 8.0, 
-e depois execute tudo em conjunto, assim as tabelas estarão criadas.<br>
+e depois execute tudo em conjunto, assim as tabelas estarão criadas.
+
 -Instalação do framework node.js é crucial para conexao entre o banco de dados e o sistema (no terminal). 
 
 ⚙️ Passo a passo bash
@@ -44,19 +45,26 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.<br>
       git clone https://github.com/robinn04/sghss-backend.git
       cd sghss-backend
 
-# Instale as dependências
-npm init -y
-npm install express mysql2 dotenv bcryptjs jsonwebtoken cors
+- Instale as dependências<br>
 
-# Configure o arquivo .env
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=root
-DB_NAME=SGHSS
-JWT_SECRET=chave_secreta
+      npm init -y
+      npm install express mysql2 dotenv bcryptjs jsonwebtoken cors
 
-# Inicie o servidor
-node index.js
+- Configure o arquivo .env<br>
+
+      DB_HOST=localhost
+      DB_USER=root
+      DB_PASS=root
+      DB_NAME=SGHSS
+      JWT_SECRET=chave_secreta
+-Verifique as informações de conexão do seu servidor do banco de dados Mysql. Para isso vá em sghss-backend
+/.env altere as variaveis conforme as informações do seu banco dados local.
+
+
+- Inicie o servidor
+
+      node index.js
+  
 🔐 Autenticação JWT
 A maioria das rotas exige autenticação via token. Use o endpoint de sign-up e login para gerar seu token.
 
