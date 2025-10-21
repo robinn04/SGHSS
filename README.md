@@ -1,7 +1,8 @@
 # 🏥 SGHSS – Sistema de Gestão Hospitalar e de Serviços de Saúde
-Projeto desenvolvido para a disciplina Projeto Multidisciplinar: Desenvolvimento Back-End do curso de Análise e Desenvolvimento de Sistemas – UNINTER.
+Sistema desenvolvido para a disciplina Projeto Multidisciplinar: Desenvolvimento Back-End do curso de Análise e Desenvolvimento de Sistemas – UNINTER.
 
-👨‍💻 Autor: Robinson Francisco Silva de Mesquita / 🆔 RU: 4522562
+👨‍💻 Autor: Robinson Francisco Silva de Mesquita 
+🆔 RU: 4522562
 
 🚀 Sobre o Projeto
 O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas e serviços de saúde. Permite funcionalidades como:
