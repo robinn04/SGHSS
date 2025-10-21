@@ -29,9 +29,12 @@ O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas 
  
 # 🧪 Executando localmente
 📦 Pré-requisitos
-MySQL Workbench 8.0 CE
+- MySQL Workbench 8.0 CE instalado<br>
+- Node.js instalado<br>
 
-Node.js instalado
+Antes de executar o codigo principal, recomendo usar o MySQL Workbench 8.0 CE para modelar o banco de dados com as tabelas.
+Quando for criar as tabelas do banco de dados ultize o arquivo "script criar banco de dados.txt", e copie todo o codigo dentro dele para dentro do MySQL Workbench 8.0, 
+e depois execute tudo em conjunto, assim as tabelas estarão criadas.
 
 ⚙️ Passo a passo
 bash
