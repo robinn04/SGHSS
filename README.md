@@ -6,6 +6,7 @@ Sistema desenvolvido para a disciplina Projeto Multidisciplinar: Desenvolvimento
 
 # 🚀 Sobre o Projeto
 O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas e serviços de saúde. Permite funcionalidades como:
+
 Cadastro e listagem de pacientes <br>
 Gerenciamento de profissionais da saúde<br>
 Agendamento de consultas e teleconsultas<br>
