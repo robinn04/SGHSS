@@ -16,17 +16,17 @@ O SGHSS é uma API RESTful voltada para o gerenciamento de hospitais, clínicas 
 
 # 🛠️ Tecnologias Utilizadas
 
--JavaScript:	  Linguagem principal do backend<br>
--Node.js:	      Ambiente de execução<br>
--Express.js:   	Framework para APIs RESTful<br>
--MySQL:	        Banco de dados relacional<br>
--mysql2:	      Driver de conexão com MySQL<br>
--bcryptjs:	    Criptografia de senhas<br>
--jsonwebtoken:	Autenticação com tokens<br>
--dotenv:	      Gerenciamento de variáveis de ambiente<br>
--CORS:	        Permitir requisições entre origens distintas<br>
--Insomnia:	    Testes de requisições HTTP<br>
-
+- JavaScript:	  Linguagem principal do backend<br>
+- Node.js:	    Ambiente de execução<br>
+- Express.js:   Framework para APIs RESTful<br>
+- MySQL:	      Banco de dados relacional<br>
+- mysql2:	      Driver de conexão com MySQL<br>
+- bcryptjs:	    Criptografia de senhas<br>
+- jsonwebtoken:	Autenticação com tokens<br>
+- dotenv:	      Gerenciamento de variáveis de ambiente<br>
+- CORS:	        Permitir requisições entre origens distintas<br>
+- Insomnia:	    Testes de requisições HTTP<br>
+ 
 🧪 Executando Localmente
 📦 Pré-requisitos
 MySQL Workbench 8.0 CE
