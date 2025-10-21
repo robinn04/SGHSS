@@ -71,7 +71,8 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
 🔑 Registrar administrador<br>
 - http
 - POST /api/admin/signup
-- json
+- Content-Type: application/json 
+- body
   
       {
         "usuario": "admin5",
@@ -80,13 +81,29 @@ e depois execute tudo em conjunto, assim as tabelas estarão criadas.
         "cpfAdministrador": "12345678901",
         "nivelAcesso": 1
       }
+- RESULTADO:
   
-- 🔑 Login administrador
+      {
+   	    "message": "Administrador cadastrado com sucesso!"
+       }
+  
+🔑 Login administrador
 - http
 - POST /api/admin/login
-- json
+- Content-Type: application/json 
+- body
   
       {
         "usuario": "admin5",
         "senha": "123456"
       }
+- RESULTADO:
+  
+     	{
+     		"message": "Login realizado com sucesso",
+     		"token":   "eyJhbGciOiJIUzI1N..."
+     	}
+
+
+
+
